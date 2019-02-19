@@ -1,17 +1,21 @@
 const USER_ID = "43c56e3c107147d5b2c1a24f608462";
-const ACCESS_PORT = "50009";
+const URL = "prova.scytlbrasil.com:81/Api/tasks/PostTask";
 
-const URL = "http://prova.scytlbrasil.com/Api/tasks/PostTask";
+var url = "http://" + URL;
 
 function createSchedule() {
     var form = document.getElementById("create_form");
 
-    const formData = new FormData(form);
+    var formData = new FormData(form);
     formData.append('userid', USER_ID);
 
-    let dataJson = {};
-
-    for (const [key, value]  of formData.entries()) {
-        dataJson[key] = value;
+    var request = new XMLHttpRequest();
+    request.open("POST", url, true);
+    request.onload = function() {
+        console.log("post");
+        console.log(this.responseText);
     }
+    request.send(formData);
+
+    location.href = "../index.html";
 }
