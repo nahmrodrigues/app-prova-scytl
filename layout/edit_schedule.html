@@ -2,32 +2,32 @@
 <html lang="en">
 
 <head>
-  <title>Scheduler</title>
+  <title id="title">Edit Schedule</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <link href="../style/create_schedule.css" rel="stylesheet">
+  <link href="../style/edit_schedule.css" rel="stylesheet">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <script src="../scripts/create_schedule.js"></script>
+  <script src="../scripts/edit_schedule.js"></script>
 </head>
 
 <body>
 
-    <form id="create_form">
+    <form id="edit-form">
         Title:<br>
-        <input type="text" name="title">
+        <input type="text" name="title" id="title">
         <br>
         Description:<br>
-        <input type="text" name="description">
+        <input type="text" name="description" id="description">
         <br>
         Completed:<br>
-        <input type="radio" name="completed" checked> Yes
-        <input type="radio" name="completed"> No
+        <input type="radio" name="completed" id="completed-yes" checked> Yes
+        <input type="radio" name="completed" id="completed-no"> No
         <br>
         Deadline:<br>
-        <input type="date" name="deadline">
+        <input type="date" name="deadline" id="deadline">
         <br>
     </form>
 

@@ -4,7 +4,7 @@ const URL = "prova.scytlbrasil.com:81/Api/tasks/PostTask?userid=";
 var url = "http://" + URL + USER_ID;
 
 function createSchedule() {
-    var form = document.getElementById("create_form");
+    var form = document.getElementById("create-form");
 
     var formData = new FormData(form);
     formData.append('userid', USER_ID);
