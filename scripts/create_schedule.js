@@ -4,24 +4,39 @@ const URL = "prova.scytlbrasil.com:81/Api/tasks/PostTask?userid=";
 var url = "http://" + URL + USER_ID;
 
 function createSchedule() {
-    var form = document.getElementById("create-form");
-
-    var formData = new FormData(form);
-    formData.append('userid', USER_ID);
-
-    let data = {};
-
-    for (const [key, value]  of formData.entries()) {
-        dataJson[key] = value;
-    }
-
     var request = new XMLHttpRequest();
     request.open("POST", url, true);  
     request.setRequestHeader("Accept", "application/json");
-    request.setRequestHeader("Content-type", "application/json")
+    request.setRequestHeader("Content-type", "application/json");
     request.onload = function() {
-        console.log("post");
         console.log(this.responseText);
+
+        if (request.status >= 200 && request.status < 400) {
+            location.href = "../index.html";
+        }
     }
-    request.send(JSON.stringify(data));
+    request.send(getData());
+}
+
+function getData() {
+    var form = document.getElementById("create-form");
+
+    let data = {};
+
+    for(i = 0; i < form.elements.length; i++) {
+        data[form.elements.item(i).name] = form.elements.item(i).value;
+    }
+
+    if(form.elements.item(2).checked == true) {
+        data["completed"] = true;
+    }
+    else {
+        data["completed"] = false;
+    }
+
+    data["userid"] = USER_ID;
+
+    console.log(data);
+
+    return JSON.stringify(data);
 }
