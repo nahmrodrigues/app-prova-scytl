@@ -1,7 +1,7 @@
 const USER_ID = "43c56e3c107147d5b2c1a24f608462";
-const URL = "prova.scytlbrasil.com:81/Api/tasks/PostTask?userid=";
+const URL = "http://prova.scytlbrasil.com:81/Api/tasks/PostTask?userid=";
 
-var url = "http://" + URL + USER_ID;
+var url = URL + USER_ID;
 
 function createSchedule() {
     var request = new XMLHttpRequest();
@@ -9,9 +9,9 @@ function createSchedule() {
     request.setRequestHeader("Accept", "application/json");
     request.setRequestHeader("Content-type", "application/json");
     request.onload = function() {
-        console.log(this.responseText);
-
+        
         if (request.status >= 200 && request.status < 400) {
+            console.log(this.responseText);
             location.href = "../index.html";
         }
     }

@@ -1,12 +1,10 @@
 const USER_ID = "43c56e3c107147d5b2c1a24f608462";
-const URL = "prova.scytlbrasil.com:81/Api/tasks/"
-
-var url = "http://" + URL;
+const URL = "http://prova.scytlbrasil.com:81/Api/tasks/";
 
 processData(getId());
 
 function getId() {
-    var parameters = location.search.substring(1).split('?');
+    var parameters = location.search.substring(1).split("?");
 
     var temp = parameters[0].split("=");
     id = unescape(temp[1]);
@@ -15,15 +13,17 @@ function getId() {
 }
 
 function processData(id) {
-    var request_url = url + "GetTask?id=" + id + "&userid=" + USER_ID;
+    var url = URL + "GetTask?id=" + id + "&userid=" + USER_ID;
 
     var request = new XMLHttpRequest();
-    request.open("GET", request_url, true);
+    request.open("GET", url, true);
     request.onload = function() {
-        var data = JSON.parse(this.response);
-
         if (request.status >= 200 && request.status < 400) {
-           loadData(data);
+            console.log(this.responseText); 
+            loadData(JSON.parse(this.response));
+        }
+        else {
+            console.log("Error");
         }
     }
     request.send();
@@ -48,17 +48,19 @@ function loadData(data) {
 }
 
 function editSchedule(id) {
-    var request_url = url + "EditTask?id=" + id + "&userid=" + USER_ID;
+    var url = URL + "EditTask?id=" + id + "&userid=" + USER_ID;
 
     var request = new XMLHttpRequest();
-    request.open("POST", request_url, true);
+    request.open("POST", url, true);
     request.setRequestHeader("Accept", "application/json");
     request.setRequestHeader("Content-type", "application/json");
     request.onload = function() {
-        console.log(this.responseText);
-
         if (request.status >= 200 && request.status < 400) {
+            console.log(this.responseText);
             location.href = "../index.html";
+        }
+        else {
+            console.log("Error");
         }
     }
     request.send(getData());
@@ -81,4 +83,23 @@ function getData() {
     }
 
     return JSON.stringify(data);
+}
+
+function deleteSchedule(id) {
+    var url = URL + "RemoveTask?id=" + id + "&userid=" + USER_ID;
+
+    var request = new XMLHttpRequest();
+    request.open("POST", url, true);
+    request.setRequestHeader("Accept", "application/json");
+    request.setRequestHeader("Content-type", "application/json");
+    request.onload = function() {
+        if (request.status >= 200 && request.status < 400) {
+            console.log(this.responseText);
+            location.href = "../index.html";
+        }
+        else {
+            console.log("Error");
+        }
+    }
+    request.send();
 }
