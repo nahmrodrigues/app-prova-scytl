@@ -15,7 +15,30 @@
 
 <body>
 
-    <form id="edit-form">
+  <div class="panel-group">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <nav class="navbar">
+            <div class="container-fluid">
+              <div class="navbar navbar-nav">
+                <a  class="navbar-brand" data-toggle="collapse" href="#collapse1">
+                  <button type="button" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div id="collapse1" class="panel-collapse collapse">
+          <div class="panel-body">Panel Body</div>
+          <div class="panel-footer">Panel Footer</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <form id="edit-form">
         Title:<br>
         <input type="text" name="title" id="title">
         <br>
@@ -29,10 +52,33 @@
         Deadline:<br>
         <input type="date" name="deadline" id="deadline">
         <br>
-    </form>
+      </form>
+    
+      <button data-toggle="modal" data-target="#myModal">DELETE SCHEDULE</button>
+      <button onclick="editSchedule(getId())">UPDATE SCHEDULE</button>
+    </div>
 
-    <button onclick="deleteSchedule(getId())">DELETE SCHEDULE</button>
-    <button onclick="editSchedule(getId())">UPDATE SCHEDULE</button>
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">ARE YOU SURE?</h4>
+      </div>
+      <div class="modal-body">
+        <p>You are about to delete this schedule.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">NOPE, I WILL KEEP THE SCHEDULE</button>
+        <button type="button" class="btn btn-default" onclick="deleteSchedule(getId())">DELETE SCHEDULE</button>
+      </div>
+    </div>
+
+  </div>
+</div>
     
 </body>
 

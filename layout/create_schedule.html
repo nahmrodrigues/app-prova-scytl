@@ -15,7 +15,30 @@
 
 <body>
 
-    <form id="create-form">
+    <div class="panel-group">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <nav class="navbar">
+            <div class="container-fluid">
+              <div class="navbar navbar-nav">
+                <a  class="navbar-brand" data-toggle="collapse" href="#collapse1">
+                  <button type="button" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div id="collapse1" class="panel-collapse collapse">
+          <div class="panel-body">Panel Body</div>
+          <div class="panel-footer">Panel Footer</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <form id="create-form">
         Title:<br>
         <input type="text" name="title">
         <br>
@@ -29,12 +52,9 @@
         Deadline:<br>
         <input type="date" name="deadline">
         <br>
-    </form>
-
-    <button onclick="createSchedule()">CREATE SCHEDULE</button>
-
-    <div id="textDiv">
-
+      </form>
+  
+      <button type="button" onclick="createSchedule()">CREATE SCHEDULE</button>
     </div>
     
 </body>
