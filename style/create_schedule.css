@@ -2,10 +2,6 @@
     background-color: #E6E6FA;
 }
 
-.home {
-    margin-top: 17px;
-}
-
 .navbar-brand {
     color: grey;
 }
@@ -25,7 +21,7 @@
 }
 
 .btn {
-    background-color: green;
+    background-color: mediumseagreen;
     color: white;
     margin-bottom: 20px;
 }

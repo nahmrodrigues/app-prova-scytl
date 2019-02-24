@@ -22,8 +22,12 @@
       </a>
       <h4 class="home">My Schedules</h4>    
       <div id="collapse1" class="panel-collapse collapse">
-        <div class="panel-body">Panel Body</div>
-        <div class="panel-footer">Panel Footer</div>
+        <div class="panel-body">
+          <a href="javascript:goHome()">Home</a>
+        </div>
+        <div class="panel-footer">
+          <a href="javascript:goCreate()">Create Schedule</a>
+        </div>
       </div>
     </div>
   </div>
@@ -32,7 +36,7 @@
 
   <div class="footer">
     <p class="footer-p">
-      <button onclick="createSchedule()" type="button-sm" class="btn btn-sm" >
+      <button onclick="goCreate()" type="button-sm" class="btn btn-sm" >
         CREATE NEW SCHEDULE
       </button>
     </p>

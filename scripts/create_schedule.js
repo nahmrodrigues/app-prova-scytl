@@ -40,8 +40,11 @@ function getData() {
     if(form.elements.item(2).checked == true) {
         data["completed"] = true;
     }
-    else {
+    else if (form.elements.item(3).checked == true) {
         data["completed"] = false;
+    }
+    else {
+        data["completed"] = null;
     }
 
     data["userid"] = USER_ID;
@@ -49,4 +52,12 @@ function getData() {
     console.log(data);
 
     return JSON.stringify(data);
+}
+
+function goHome() {
+    location.href = "../index.html";
+}
+
+function goCreate() {
+    location.href = "create_schedule.html";
 }

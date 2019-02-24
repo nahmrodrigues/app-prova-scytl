@@ -38,11 +38,11 @@ function loadData(data) {
     if(data.Completed == true) {
         form.elements.item(2).checked = true;
     }
-    else {
+    else if (data.Completed == false) {
         form.elements.item(3).checked = true;
     }
 
-    if (data.deadline != null) {
+    if (data.Deadline != null) {
         var deadline = data.Deadline.split('T');
         form.elements.item(4).value = deadline[0];
     }
@@ -90,8 +90,11 @@ function getData() {
     if(form.elements.item(2).checked == true) {
         data["completed"] = true;
     }
-    else {
+    else if (form.elements.item(3).checked == true) {
         data["completed"] = false;
+    }
+    else {
+        data["completed"] = null;
     }
 
     return JSON.stringify(data);
@@ -114,4 +117,12 @@ function deleteSchedule(id) {
         }
     }
     request.send();
+}
+
+function goHome() {
+    location.href = "../index.html";
+}
+
+function goCreate() {
+    location.href = "create_schedule.html";
 }

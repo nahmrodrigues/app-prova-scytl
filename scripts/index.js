@@ -46,6 +46,10 @@ function getItems() {
     request.send();
 }
 
-function createSchedule() {
+function goHome() {
+    location.href = "index.html";
+}
+
+function goCreate() {
     location.href = "layout/create_schedule.html";
 }
