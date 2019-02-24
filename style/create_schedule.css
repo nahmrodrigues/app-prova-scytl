@@ -1,0 +1,35 @@
+.body {
+    background-color: #E6E6FA;
+}
+
+.home {
+    margin-top: 17px;
+}
+
+.navbar-brand {
+    color: grey;
+}
+
+.container {
+    width: 80%;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.create-form {
+    margin-top: 20px;
+}
+
+.label {
+    color: grey;
+}
+
+.btn {
+    background-color: green;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.btn-align {
+    text-align: right;
+}
