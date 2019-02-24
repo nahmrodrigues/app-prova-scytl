@@ -29,12 +29,13 @@ function getItems() {
                 var input = document.createElement("input");
                 input.setAttribute("type", "submit");
                 input.setAttribute("value", "Schedule nº " + i);
-                input.setAttribute("class", "btn btn-default btn-block");
+                input.setAttribute("class", "btn btn-lg btn-block");
 
                 form.appendChild(hiddenInput);
                 form.appendChild(input);
 
                 content.appendChild(form);
+                content.appendChild(document.createElement("p"));
 
                 i = i+1;
             });

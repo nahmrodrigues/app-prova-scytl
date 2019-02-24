@@ -3,6 +3,16 @@ const URL = "http://prova.scytlbrasil.com:81/Api/tasks/PostTask?userid=";
 
 var url = URL + USER_ID;
 
+function validateForm() {
+    var x = document.forms["create-form"]["title"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+    }
+    else {
+        createSchedule();
+    }
+}
+
 function createSchedule() {
     var request = new XMLHttpRequest();
     request.open("POST", url, true);  

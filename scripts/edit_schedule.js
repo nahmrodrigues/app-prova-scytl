@@ -42,9 +42,21 @@ function loadData(data) {
         form.elements.item(3).checked = true;
     }
 
-    var deadline = data.Deadline.split('T');
+    if (data.deadline != null) {
+        var deadline = data.Deadline.split('T');
+        form.elements.item(4).value = deadline[0];
+    }
+    
+}
 
-    form.elements.item(4).value = deadline[0];
+function validateForm() {
+    var x = document.forms["edit-form"]["title"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+    }
+    else {
+        editSchedule(getId());
+    }
 }
 
 function editSchedule(id) {
