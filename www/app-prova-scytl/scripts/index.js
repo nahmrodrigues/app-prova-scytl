@@ -6,6 +6,7 @@ var url = "http://" + URL + USER_ID;
 getItems();
 
 function getItems() {
+
     var request = new XMLHttpRequest();
     request.open("GET", url, true);
     request.onload = function() {
