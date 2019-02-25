@@ -1,0 +1,33 @@
+.body {
+    background-color: #E6E6FA;
+}
+
+.home {
+    margin-top: 17px;
+}
+
+.navbar-brand {
+    color: grey;
+}
+
+.container {
+    width: 60%;
+}
+
+.btn {
+    background-color: white;
+}
+
+.footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #E6E6FA;
+    text-align: center;
+}
+
+.footer-p {
+    margin-bottom: 40px;
+    margin-top: 40px;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>New Schedule</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="../style/create_schedule.css" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="../scripts/create_schedule.js"></script>
+</head>
+
+<body class="body">
+
+    <div class="panel-group">
+      <div class="panel panel-default">
+        <div class="container-fluid">
+          <a  class="navbar-brand" data-toggle="collapse" href="#collapse1">
+            <span class="glyphicon glyphicon-menu-hamburger"></span>
+          </a>
+        </div>     
+        <div id="collapse1" class="panel-collapse collapse">
+          <div class="panel-body">
+            <a href="javascript:goHome()">Home</a>
+          </div>
+          <div class="panel-footer">
+            <a href="javascript:goCreate()">Create Schedule</a>
+          </div>
+        </div>
+      </div>
+    </div>
+        
+
+    <div class=" container panel panel-default">
+      <form class="create-form" id="create-form">
+        <div class="form-group">
+          <label class="label" for="title">* Title:</label>
+          <input type="text" name="title" class="form-control">
+        </div>
+        <div>
+          <label class="label" for="description">Description:</label>
+          <textarea class="form-control" type="text" name="description"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="label radio-inline" for="completed">Is this schedule completed?</label>
+          <label class="label radio-inline"><input type="radio" name="completed" id="completed-yes">Yes</label>
+          <label class="label radio-inline"><input type="radio" name="completed" id="completed-no">No</label>
+        </div>
+        <div class="form-group">
+          <label class="label" for="deadline">Deadline:</label>
+          <input type="date" name="deadline" class="form-control">
+        </div>
+      </form>
+      
+      <p class="btn-align">
+        <button class="btn btn-sm" type="button-sm" onclick="validateForm()">
+          <b>CREATE SCHEDULE</b>
+        </button>
+      </p>
+    </div>
+    
+</body>
+
+</html>
