@@ -17,7 +17,7 @@ Disponível nas versões [Desktop](http://docs.phonegap.com/getting-started/1-in
 
 ### 2. Faça o download do projeto
 
-Clone o projeto localmente e alterne para a branch _HybridApp_ ou faça o download do arquivo ZIP do projeto (disponibilizado na branch _HybridApp_).
+Clone o projeto localmente e alterne para a branch _HybridApp_ ou faça o download do arquivo ZIP do projeto (disponibilizado na branch [_HybridApp_](https://github.com/nahmrodrigues/app-prova-scytl/tree/HybridApp)).
 
 ### 3. Rode o servidor
 
