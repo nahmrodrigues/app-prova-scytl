@@ -4,7 +4,7 @@ Este projeto foi desenvolvido com o intuito de realizar a prova do processo sele
 
 A aplicação foi implementada utilizando a tríade HTML, CSS e JavaScript com o objetivo de se obter versões _web_ e _mobile_ da mesma. Para isso, foi utilizado o framework de desenvolvimento de apps híbridos _PhoneGap_. As instruções para o download do PhoneGap e execução do sistema estão na [seção seguinte](#App-PhoneGap).
 
-> Observação: A [última seção](#Web) oferece uma alternativa para testar a aplicação sem a utilização do PhoneGap.
+> Nota: A [última seção](#Web) oferece uma alternativa para testar a aplicação sem a utilização do PhoneGap.
 
 
 ## App PhoneGap
@@ -32,9 +32,11 @@ Você pode testar a aplicação acessando, pelo browser, a URL _localhost_ na po
 > Ex 1: http://localhost:3000
 > Ex 2: http://192.168.1.11:3000
 
-Para testar pelo celular, basta baixar o aplicativo _PhoneGap Developer App_ e conectar com o endereço do servidor disponibilizado.
+Para testar pelo celular, basta baixar o aplicativo _PhoneGap Developer App_, que está disponível apenas para usuários do Android ([Google Play](https://play.google.com/store/apps/details?id=com.adobe.phonegap.app)) e do WindowsPhone ([Windows Phone Store](https://www.microsoft.com/en-us/p/phonegap-developer/9wzdncrdfsj0)), e conectar com o endereço do servidor disponibilizado.
 
 Para maiores informações sobre como rodar e testar a aplicação, acesse [Preview You App (Desktop App)](http://docs.phonegap.com/getting-started/4-preview-your-app/desktop/), se você está utilizando a versão Desktop do PhoneGap, ou [Preview Your App (CLI)](http://docs.phonegap.com/getting-started/4-preview-your-app/cli/), se você está utilizando a versão CLI.
+
+> Nota: Pode ser que você encontre problemas na execução da aplicação pelo celular, por conta de algumas falhas ainda não resolvidas na utilização da biblioteca mobile do JQuery. É preferível o teste pelo browser.
 
 ## Web
 
